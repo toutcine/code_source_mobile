@@ -1,0 +1,92 @@
+<ion-view view-title="" hide-nav-bar="false">
+    <ion-content>
+    <style type="text/css">
+		.avatar {
+		  	height: 128px;
+		  	width: 128px;
+		  	border-radius: 50%;
+		  	border: 3px solid #fff;
+		  	box-shadow: 0 4pt 10pt rgba(0,0,0,1);
+		}
+		#upload{
+		    display: none;
+		}
+	</style>
+		<body class="sign-in-up">
+		    <section>
+					<div id="page-wrapper" class="sign-in-wrapper">
+						<div class="graphs">
+							<div class="sign-in-form">
+								<div class="sign-in-form-top">
+									<p><span>Nouveau Compte </span> <a href="index.php">ToutCine</a></p>
+								</div>
+								<div class="signin">
+									<form ng-submit="inscription()">
+
+										<div class="log-input">
+											<div class="log-input-left">
+											   <input type="text" ng-model="inscription.pseudonyme" placeholder="Nom"/>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+
+										<div class="log-input">
+											<div class="log-input-left">
+											   <input type="number" ng-model="inscription.age" placeholder="Age"/>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+
+										<div class="log-input">
+											<div class="log-input-left">
+											   <input type="text" ng-model="inscription.email" placeholder="Email"/>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+
+										<div class="log-input">
+											<div class="log-input-left">
+											   <input type="password" ng-model="inscription.pass" placeholder="Password"/>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+
+										<div class="log-input">
+											<div class="log-input-left">
+											   <input type="password" ng-model="inscription.confirm" placeholder="Confirm Pass"/>
+											</div>
+											<div class="clearfix"> </div>
+										</div>
+                                        
+                                        <div class="log-input">
+											<div class="log-input-left">
+												<p>Sexe : 
+													<input type="radio" ng-model="inscription.sexe" value="Masculin" checked> Male
+													<input type="radio" ng-model="inscription.sexe" value="Feminin"> Female
+											    </p>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+
+                                        <div class="log-input">
+					                        <div class="item item-avatar menuList"  menu-close class="item">
+					                        	<img src="{{data.image}}">
+					                        	<h2 ng-click="uploadProfilePic()">Avatar</h2>
+						                        <p ng-click="uploadProfilePic()">Changer...</p> 
+											</div>
+					                        <input type="file" accept="image/*" id="upload" />
+                                        </div>
+                                        <br>
+										<input type="submit" value="Valider">
+								    </form>	 
+								</div>
+								
+							</div>
+						</div>
+					</div>
+		    </section>
+		    <script src="lib/image-uploader.bundle.min.js"></script>
+			<script src="lib/image-uploader.min.js"></script>
+	    </body>
+	</ion-content>
+</ion-view>

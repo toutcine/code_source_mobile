@@ -1,0 +1,75 @@
+<ion-side-menus enable-menu-with-back-views="false">
+     <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <u></u>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <script type="text/javascript">
+            deconnect = function($location){
+                localStorage.clear();
+                window.location.reload();
+                window.location.href = "#/app/index";
+                
+            }
+
+            verifierCompte = function($location){
+                if (localStorage.getItem("id") != null) {
+                  window.location.href = '#/app/profil';
+                }else{
+                  window.location.href = '#/app/connexion';
+                }
+            }
+    </script>
+
+    <ion-side-menu side="left">
+        <ion-content>
+            <ion-card text-center class="hide-card">
+                    <br>
+                    <br>
+                    <img src="img/logo.png" class="custom-avatar"/>
+                    <br>
+                    <br>
+                    <br>
+            </ion-card>
+                <ion-list>
+                        <a menu-close class="item item-avatar menuList" href="#/app/index" class="menu">
+                          <img src="img/icone/home-icon.png">
+                          <h2>Acceuil</h2>
+                          <p>Page de demarrage</p>
+                        </a>
+
+                        <a class="item item-avatar menuList" menu-close href="#/app/film/Film">
+                          <img src="img/icone/film2.png">
+                          <h2>Film</h2>
+                          <p>Liste de tous les film</p>
+                        </a>
+
+                        <a class="item item-avatar menuList" menu-close href="#/app/film/Serie">
+                          <img src="img/icone/serie.png">
+                          <h2>Serie</h2>
+                          <p>Liste des serie</p>
+                        </a>
+
+                        <a class="item item-avatar menuList" menu-close class="item" href="#/app/genre/Animation">
+                          <img src="img/icone/bd.png">
+                          <h2>Animation</h2>
+                          <p>Tous les film d'animation</p>
+                        </a>
+
+                        <a class="item item-avatar menuList" menu-close class="item" onclick="verifierCompte()">
+                          <img src="img/icone/profil.png">
+                          <h2>Compte</h2>
+                          <p>Acceder au profil</p>
+                        </a>
+                </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

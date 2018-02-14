@@ -1,0 +1,48 @@
+<ion-view view-title="" hide-nav-bar="false">
+  	<ion-content>
+			<div class="col-sm-8">
+				<h4 class="latest-text w3_latest_text">{{establish.titre}}</h4>
+				<div class="video-grid-single-page-agileits">
+					<img ng-src="{{establish.affiche}}" style="max-width:400px;max-height:250px;" />
+				</div>
+				<div class="col-md-6 agile_tv_series_grid_right">
+                    <p class="fexi_header_para"><b style="color:#000">Scénario :</b> {{establish.description}}</p>
+                    <p class="fexi_header_para"><b style="color:#000">Date de sortie :</b> {{establish.anneeDeSortie}}</p>
+                    <p class="fexi_header_para"><b style="color:#000">Genres :</b> {{establish.genre}}</p>
+                    <p class="fexi_header_para"><b style="color:#000">Genres :</b> {{establish.acteur}}</p>
+                    <p class="fexi_header_para"><b style="color:#000">Genres :</b> {{establish.realisateur}}</p>
+                    <p class="fexi_header_para fexi_header_para1"><b style="color:#000">Évaluation étoilée :</b>
+                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                    </p>                   
+                </div>
+				<div class="all-comments" style="margin-left: 3px;">
+						<div class="all-comments-info">
+							<!--<h5>Commentaires (2)</h5>-->
+							<div class="agile-info-wthree-box">
+								<form ng-submit="commenter()">
+									<textarea style="border-radius:5px;" ng-model="commenter.message" placeholder="Message" required=""></textarea>
+									<input type="submit" value="Envoyer">
+									<div class="clearfix"> </div>
+								</form>
+							</div>
+						</div>
+	        			<div class="log-input" ng-repeat="list in liste">
+					                        <div class="item item-avatar menuList"  menu-close class="item">
+
+                                                <img src="{{fiche.avatar}}">
+					                        	<h2>{{fiche.pseudonyme}}</h2>
+
+						                        <p>{{list.commentaire}}</p>
+						                        <p>Date : {{list.date | date}}</p>
+											</div>
+                                    </div>
+							
+						
+				</div>
+			</div>
+  	</ion-content>
+</ion-view>

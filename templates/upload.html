@@ -1,0 +1,23 @@
+<ion-view view-title="" hide-nav-bar="false">
+	<style type="text/css">
+		.avatar {
+		  height: 128px;
+		  width: 128px;
+		  border-radius: 50%;
+		  border: 3px solid #fff;
+		  box-shadow: 0 4pt 10pt rgba(0,0,0,1);
+		}
+
+		#upload{
+		    display: none;
+		}
+	</style>
+        <ion-content ng-controller="profileCtrl">
+        	<div class="item item-avatar">
+        		<button class="button button-primary" ng-click="uploadProfilePic()">Change Picture</button>
+			    <img src="{{data.image}}">
+			</div>
+			<!--<img ng-src="{{data.image}}" class="avatar"/>-->
+			<input type="file" accept="image/*" id="upload" />
+		</ion-content>
+</ion-view>

@@ -1,0 +1,202 @@
+<ion-view>
+      <ion-content>
+        <br>
+        <img src="img/logo.png" class="custom-avatar"/>
+        <br>
+        <br>
+        <br>
+        <body>
+        <h4 class="latest-text w3_latest_text">Film Romantique</h4>
+        
+            <ul id="myTab" class="nav nav-tabs">
+                    <li role="presentation"><a href="#/app/index">Romance</a></li>
+                    <li role="presentation"><a href="#/app/genre/Comédie">Comédie</a></li>
+                    <li role="presentation"><a href="#/app/genre/Horreur">Horreur</a></li>
+                    <li role="presentation"><a href="#/app/genre/Aventure">Aventure</a></li> 
+            </ul>
+        
+
+        <div id="myTabContent" class="tab-content" style="margin-left: 8px;">
+            <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                <div class="w3_agile_featured_movies">
+                            <div class="col-md-2 w3l-movie-gride-agile" ng-repeat="list in establish">
+                                <a href="#/app/fiche/{{list.id}}" class="hvr-shutter-out-horizontal"><img ng-src="{{list.affiche}}" title="album-name" class="img-responsive" alt=" " />
+                                    <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                                </a>
+                                <div class="mid-1 agileits_w3layouts_mid_1_home">
+                                    <div class="w3l-movie-text">
+                                        <h6><a href="#/app/fiche/{{list.id}}">{{list.titre}}</a></h6>                            
+                                    </div>
+                                    <ul class="w3l-ratings">
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                    <p>Année  {{list.anneeDeSortie}}</p>
+                                    <div class="clearfix"></div>
+                                </div>
+                                
+                            </div>
+                        <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+<!-- Latest-tv-series -->
+    <div class="Latest-tv-series">
+        <h4 class="latest-text w3_latest_text w3_home_popular">Most Popular Movies</h4>
+        <div class="container">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        
+                        <li style="border-radius: 20px;">
+                            <div class="agile_tv_series_grid" style="border-radius: 20px;">
+                                <div class="col-md-6 agile_tv_series_grid_left">
+                                    <div class="w3ls_market_video_grid1">
+                                        <img src="images/h1-1.jpg" alt=" " class="img-responsive" />
+                                        <!--<a class="w3_play_icon" href="#small-dialog">
+                                            <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                                        </a>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 agile_tv_series_grid_right">
+                                    <p class="fexi_header"><h4>the conjuring 2</h4></p>
+                                    <p class="fexi_header_para"><b style="color:#000">Scénario :</b> Le film suit Ed et Lorraine Warren qui voyagent en Angleterre afin d'aider la famille Hodgson, qui sont victimes d'un cas de poltergeist dans leur maison de Brimsdown, à Enfield en 1977, cas qui plus tard sera appelé le « Poltergeist d'Enfield »...</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Date de sortie :</b> sorti en 2013</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Genres :</b>
+                                        <a href="#/app/genre/Horreur">Thriller</a> | <a href="#/app/genre/Aventure">Adventure</a>
+                                    </p>
+                                    <p class="fexi_header_para fexi_header_para1"><b style="color:#000">Évaluation étoilée :</b>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="agile_tv_series_grid">
+                                <div class="col-md-6 agile_tv_series_grid_left">
+                                    <div class="w3ls_market_video_grid1">
+                                        <img src="images/h2-1.jpg" alt=" " class="img-responsive" />
+                                        <!--<a class="w3_play_icon1" href="#small-dialog1">
+                                            <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                                        </a>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 agile_tv_series_grid_right">
+                                    <p class="fexi_header"><h4>Château de Cawdor</h4></p>
+                                    <p class="fexi_header_para"><b style="color:#000">Scénario :</b> Le château est principalement connu par la tragédie Macbeth de Shakespeare, le personnage éponyme est ent fait thane de Cawdor...</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Date de sortie :</b> oct. 2014</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Genres :</b>
+                                        <a href="#/app/genre/Horreur">Thriller</a> | <a href="#/app/genre/Aventure">Adventure</a>
+                                    </p>
+                                    <p class="fexi_header_para fexi_header_para1"><b style="color:#000">Évaluation étoilée :</b>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                                <div class="agileinfo_flexislider_grids">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="agile_tv_series_grid">
+                               <div class="col-md-6 agile_tv_series_grid_left">
+                                    <div class="w3ls_market_video_grid1">
+                                        <img src="images/h3-1.jpg" alt=" " class="img-responsive" />
+                                        <!--<a class="w3_play_icon2" href="#small-dialog2">
+                                            <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
+                                        </a>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 agile_tv_series_grid_right">
+                                    <p class="fexi_header"><h4>Capitain America - Civil war</h4></p>
+                                    <p class="fexi_header_para"><b style="color:#000">Scénario :</b> Le Soldat de l'Hiver (alias Bucky Barnes) a autrefois été reconditionné dans une base militaire soviétique sibérienne et hypnotisé à l'aide de certains mots...</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Date de sortie :</b> sorti en 2016</p>
+                                    <p class="fexi_header_para"><b style="color:#000">Genres :</b>
+                                        <a href="#/app/genre/Action">Super-héros</a> | <a href="#/app/genre/Action">Action</a>
+                                    </p>
+                                    <p class="fexi_header_para fexi_header_para1"><b style="color:#000">Évaluation étoilée :</b>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a>
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                                <div class="agileinfo_flexislider_grids">
+                                <br>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+
+            <!-- flexSlider -->
+                <link rel="stylesheet" href="../css/flexslider.css" type="text/css" media="screen" property="" />
+                <script defer src="../js/jquery.flexslider.js"></script>
+                <script type="text/javascript">
+                $(window).load(function(){
+                  $('.flexslider').flexslider({
+                    animation: "slide",
+                    start: function(slider){
+                      $('body').removeClass('loading');
+                    }
+                  });
+                });
+              </script>
+            <!-- //flexSlider -->
+
+        </div>
+    </div>
+
+    <!-- moove pop-up-box -->  
+        <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
+    <!--/moove pop-up-box -->
+
+<!-- //Latest-tv-series -->
+<!-- footer 
+    <div class="footer">
+            <div class="col-md-7 w3ls_footer_grid1_right">
+                <ul>
+                    <li><a href="genres.html">Movies</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="horror.html">Action</a></li>
+                    <li><a href="genres.html">Adventure</a></li>
+                    <li><a href="comedy.html">Comedy</a></li>
+                    <li><a href="icons.html">Icons</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+    </div>
+<!-- //footer -->
+
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- moove up -->
+    <script type="text/javascript">
+        $(document).ready(function() {                
+            $().UItoTop({ easingType: 'easeOutQuart' });
+                                
+            });
+    </script>
+<!-- /moove up -->
+   
+</body>
+</ion-content>
+</ion-view>
+
