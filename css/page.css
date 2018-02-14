@@ -1,0 +1,41 @@
+.hide-card {
+    -webkit-box-shadow: none!important;
+}
+
+.custom-avatar {
+    height: 25vw;
+    width: 53vw;
+    border-radius: 10%;
+    margin-left: 15%;
+    margin-bottom: -15%;
+    margin-top: -5%;
+}
+
+.item {
+    margin-left: 20%;
+}
+
+.member {
+    margin-left: 65%;
+    height: 25vw;
+    width: 25vw;
+    margin-bottom: -2%;
+}
+
+.menuList {
+    height: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.menu {
+    color: #E65D2A;
+    background: #2C333D;
+}
+
+.iconeImage {
+    margin-top: 1%;
+    margin-left: 3%;
+    height: 13vw;
+    width: 13vw;
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "titre";
+    src: url("../fonts/A little sunshine.ttf");
+}
+
+@font-face {
+    font-family: "formulaire";
+    src: url("../fonts/a song for jennifer.ttf");
+}
+
+.titre {
+    text-align: center;
+    font-family: "titre";
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(50, 32, 208, 0.7);
+}
+
+.favoris {
+    font-family: "formulaire";
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(50, 32, 208, 0.7);
+}
