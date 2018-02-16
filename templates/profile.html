@@ -1,0 +1,77 @@
+<ion-view>
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+    <style type="text/css">
+        #upload{
+            display: none;
+        }
+    </style>
+    <br>
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url({{data.avatar}});"></div>
+                <h3><a class="light">{{data.pseudonyme}}</a></h3>
+                <h4>{{data.email}}</h4>
+            </div>
+        </div>
+
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-ios-contact"></i> Compte
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Activite
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="icon ion-ios-film-outline"></i> Favoris
+            </a>
+        </div>
+        
+        <h4 class="content padding double-padding-x">Modifier le profile</h4>
+            <div class="sign-in-form">
+                <form ng-submit="modifier()">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nom</span>
+                        <div class="row">
+                            <input type="text" value="{{data.pseudonyme}}" ng-model="data.pseudonyme" placeholder="{{data.pseudonyme}}">
+                            <i class="icon ion-android-create"></i> 
+                        </div>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Age</span>
+                        <div class="row">
+                            <input type="text" value="{{data.age}}" ng-model="data.age">
+                            <i class="icon ion-android-create"></i> 
+                        </div>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <div class="row">
+                            <input type="text" value="{{data.email}}" ng-model="data.email" style="width: 90%;">
+                            <i class="icon ion-android-create"></i> 
+                        </div>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Mots de passe</span>
+                        <div class="row">
+                            <input type="text" ng-model="data.pass" style="width: 90%;" placeholder="{{data.pass}}" value="{{data.pass}}">
+                            <i class="icon ion-android-create"></i> 
+                        </div>
+                    </label>
+                    <div class="log-input">
+                        <div class="item item-avatar menuList"  menu-close class="item">
+                            <img src="{{data.avatar}}">
+                                <h2 ng-click="uploadProfilePic()">Avatar</h2>
+                                <p ng-click="uploadProfilePic()">Changer...</p> 
+                            </div>
+                            <input type="file" accept="image/*" id="upload" />
+                        </div>
+                    </div>
+                    <div class="signin">
+                        <input type="submit" value="Modifier">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </ion-content>
+</ion-view>

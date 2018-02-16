@@ -1,0 +1,42 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>ToutCine</h1>
+            </div>
+        </div>
+        <div class="sign-in-up">
+            <section>
+                    <div id="page-wrapper" class="sign-in-wrapper">
+                        <div class="graphs">
+                            <div class="sign-in-form">
+                                <div class="signin">
+                                    <form ng-submit="connect()">
+                                        <div class="log-input">
+                                            <div class="log-input-left">
+                                               <input type="text" ng-model="connect.mail" placeholder="Email" class="user"/>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="log-input">
+                                            <div class="log-input-left">
+                                               <input type="password" ng-model="connect.pass" placeholder="Password" class="user"/>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <input type="submit" value="Connexion">
+                                    </form>  
+                                </div>
+                                <div class="new_people">
+                                    <h4>Nouvelles Personnes??</h4>
+                                    <p>Qui veut regarder le contenu complet de l'application</p>
+                                    <a href="#/app/inscription">S'inscrire!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </ion-content>
+</ion-view>

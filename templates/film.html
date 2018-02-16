@@ -1,12 +1,15 @@
 <ion-view view-title="">
     <ion-content>
+    <br>
+    <br>
+    <br>
     <h4 class="latest-text w3_latest_text">Liste des {{data.mots}}s</h4>
   	<div id="myTabContent" class="tab-content" style="margin-left: 8px;">
             <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
                 <div class="w3_agile_featured_movies">
                             <div class="col-md-2 w3l-movie-gride-agile" ng-repeat="list in establish">
-                                <a href="#/app/fiche/{{list.id}}" class="hvr-shutter-out-horizontal"><img ng-src="{{list.affiche}}" title="album-name" class="img-responsive" alt=" " />
-                                    <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                                <a href="#/app/fiche/{{list.id}}"><img ng-src="{{list.affiche}}" title="album-name" class="img-responsive" alt=" " />
+                                    <!--<div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>-->
                                 </a>
                                 <div class="mid-1 agileits_w3layouts_mid_1_home">
                                     <div class="w3l-movie-text">

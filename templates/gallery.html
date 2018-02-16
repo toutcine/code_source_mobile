@@ -1,0 +1,46 @@
+<ion-view>
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <br>
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url({{data.avatar}});"></div>
+                <h3><a class="light">{{data.pseudonyme}}</a></h3>
+                <h4>{{data.email}}</h4>
+            </div>
+        </div>
+
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-ios-contact"></i> Compte
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Activite
+            </a>
+            <a ui-sref="app.gallery" class="tab-item">
+                <i class="icon ion-ios-film-outline"></i> Favoris
+            </a>
+        </div>
+        
+        <h4 class="content padding double-padding-x">Collection de film favoris</h4>
+        <br>
+        <div id="myTabContent" class="tab-content" style="margin-left: 8px;">
+            <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                <div class="w3_agile_featured_movies">
+                            <div class="col-md-2 w3l-movie-gride-agile" ng-repeat="fiche in fiches">
+                                <a href="#/app/fiche/{{fiche.info.id}}"><img ng-src="{{fiche.info.affiche}}" class="img-responsive" alt=""/></a>
+                                <div class="mid-1 agileits_w3layouts_mid_1_home">
+                                    <div class="w3l-movie-text">
+                                        <h6><a href="#/app/fiche/{{fiche.info.id}}">{{fiche.info.titre}}</a></h6>                          
+                                    </div>
+                                    <i class="icon ion-android-cancel"></i>
+                                    <div class="clearfix"></div>
+                                </div>  
+                            </div>
+                            <!--<i class="icon ion-chatbubble positive"></i> 2
+                            <i class="icon ion-heart assertive"></i> 4-->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

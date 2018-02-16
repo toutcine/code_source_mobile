@@ -1,15 +1,28 @@
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'ionMdInput'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
     if (window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    if(window.Connection) {
+      if(navigator.connection.type == Connection.NONE) {
+          $ionicPopup.confirm({
+              title: "Internet Disconnected",
+              content: "The internet is disconnected on your device."
+          }).then(function(result) {
+              if(!result){
+                  ionic.Platform.exitApp();
+              }
+          });
+      }
+    }
+    
   });
 })
 
@@ -23,21 +36,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.upload', {
-    url: '/upload',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/upload.html',
-        controller: 'profileCtrl'
-      }
-    }
-  })
-
   .state('app.profil', {
     url: '/profil',
     views: {
       'menuContent': {
-        templateUrl: 'templates/profil.html',
+        templateUrl: 'templates/profile.html',
         controller: 'profilCtrl'
       }
     }
@@ -105,12 +108,68 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   .state('app.fiche', {
     url: '/fiche/:id',
     views: {
-      'menuContent': {
+       'menuContent': {
         templateUrl: 'templates/fiche.html',
         controller: 'getFiche'
-      }
+      },
+      'fabContent': {
+                template: '<button id="fab-gallery" class="button button-fab button-fab-top-right expanded button-energized-900 drop"><i class="icon ion-heart"></i></button>',
+                controller: function ($timeout) {
+                    $timeout(function () {
+                        document.getElementById('fab-gallery').classList.toggle('on');
+                    }, 600);
+              }
+        }
     }
   })
+
+  .state('app.activity', {
+        url: '/activity',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/activity.html',
+                controller: 'ActivityCtrl'
+            }
+        }
+    })
+
+    .state('app.friends', {
+        url: '/friends',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/friends.html',
+                controller: 'FriendsCtrl'
+            }
+        }
+    })
+
+    .state('app.gallery', {
+        url: '/gallery',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/gallery.html',
+                controller: 'GalleryCtrl'
+            }
+        }
+    })
+
+    .state('app.profile', {
+        url: '/profile',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/profile.html',
+                controller: 'ProfileCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900"><i class="icon ion-plus"></i></button>',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
 
 $urlRouterProvider.otherwise('/app/index');
 });
