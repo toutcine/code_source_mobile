@@ -4658,7 +4658,7 @@ span.badge1 {
 }
 .new_people h4{
 	font-size:2em;
-	color:#00ACED;
+	color:#ff8d1b;
 	margin:0;
 }
 .new_people p{
@@ -4669,8 +4669,8 @@ span.badge1 {
 }
 .new_people a{
 	padding:12px 30px;
-	border:1px solid #00ACED;
-	color:#00ACED;
+	border:1px solid #ff8d1b;
+	color:#ff8d1b;
 	text-decoration:none;
 	font-size:1em;
 }
@@ -4699,7 +4699,7 @@ span.badge1 {
 	text-decoration:none;
 }
 .sign-in-form-top p span{
-	color:#8BC34A;
+	color:#ff8d1b;
 }
 .signin {
     padding: 2em;
@@ -4724,7 +4724,6 @@ span.badge1 {
   font-size: 0.95em;
   padding: 10px 15px 10px 3px;
   width: 112%;
-  color: #A8A8A8;
   outline: none;
   border: 1px solid #D3D3D3;
   border-radius: 4px;
@@ -4829,7 +4828,7 @@ span.checkbox2 {
 .sign-in-form input[type="submit"] {
 	font-size: 1.1em;
     color: #fff;
-    background: #00ACED;
+    background: #ff8d1b;
     border: none;
     padding: 0.7em 1em 0.7em 1em;
     width: 99%;
